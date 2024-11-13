@@ -1,10 +1,18 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import {resolve} from "path";
+import legacy from "@vitejs/plugin-legacy";
+import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [vue()],
+	plugins: [vue(), legacy()],
+	build: {
+		rollupOptions: {
+			output: {
+				format: "iife",
+			},
+		},
+	},
 	server: {
 		proxy: {
 			"/api": {
