@@ -1,31 +1,15 @@
 import { reactive } from "vue";
 
-const courseListStore = reactive({
-	courseList: [],
+const planStore = reactive({
+  plan: {}
 });
 
-const coursePlanStore = reactive({
-	coursePlan: [],
+const concentrationStore = reactive({
+  concentration: {}
 });
 
-const boyaPlanStore = reactive({
-	boyaPlan: [],
+const studyStore = reactive({
+  study: {}
 });
 
-const boyaFinishedStore = reactive({
-	boyaFinished: [],
-});
-
-const boyaListStore = reactive({
-	boyaList: [],
-});
-
-const chosenCourseStore = reactive({
-	chosenCourse: [],
-});
-
-const chosenBoyaStore = reactive({
-  chosenBoya: []
-});
-
-export { chosenBoyaStore, courseListStore, coursePlanStore, chosenCourseStore, boyaPlanStore, boyaFinishedStore, boyaListStore };
+export { planStore, concentrationStore, studyStore };

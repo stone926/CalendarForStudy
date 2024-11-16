@@ -1,25 +1,42 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import { createMemoryHistory, createRouter } from "vue-router";
-import CourseList from "./components/CourseList.vue";
-import BoyaList from "./components/BoyaList.vue";
-import Profile from "./components/Profile.vue";
-import jsonDatabase from "../db/db.json" with { type: "json" };
+import { createWebHashHistory, createRouter } from "vue-router";
 
-let db = localStorage.getItem("db");
-if (db === null) {  
-  localStorage.setItem("db", JSON.stringify(jsonDatabase));
-}
+import Study from "@/components/Study.vue";
+import Calendar from "@/components/Calendar.vue";
+import Todo from "@/components/sub/Todo.vue";
+import Concentration from "@/components/sub/Concentration.vue";
+
+import ElementPlus from 'element-plus';
+import zhCn from 'element-plus/es/locale/lang/zh-cn';
+import 'dayjs/locale/zh-cn';
+import 'element-plus/dist/index.css';
+
+import dayjs from "dayjs";
+import relativeTime from 'dayjs/plugin/relativeTime'
+dayjs.extend(relativeTime);
 
 const routes = [
-	{ path: "/", component: CourseList },
-	{ path: "/boya", component: BoyaList },
-	{ path: "/profile", component: Profile },
+  { path: "/", component: Calendar },
+  { path: "/calendar", component: Calendar },
+  {
+    path: "/study", component: Study, children: [
+      { path: "todo", component: Todo },
+      { path: "", component: Todo },
+      {
+        path: "concentrate", component: Concentration, props: (route) => {
+          return { index: route.query.index }
+        }
+      }
+    ]
+  },
 ];
 
 const router = createRouter({
-	history: createMemoryHistory(),
-	routes,
+  history: createWebHashHistory(),
+  routes,
 });
 
-createApp(App).use(router).mount("#app");
+createApp(App).use(router).use(ElementPlus, {
+  locale: zhCn,
+}).mount("#app");

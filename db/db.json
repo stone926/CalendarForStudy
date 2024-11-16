@@ -1,434 +1,267 @@
 {
-  "course_list": [
-    {
-      "id": "zjrj_1",
-      "name": "走进软件",
-      "info": [
-        {
-          "teacher": "张三",
-          "week_start": 1,
-          "week_end": 5,
-          "classroom": "F101",
-          "time_start": "6:30",
-          "time_end": "8:30",
-          "day": 3
-        },
-        {
-          "teacher": "李四",
-          "week_start": 6,
-          "week_end": 10,
-          "classroom": "E222",
-          "time_start": "20:30",
-          "time_end": "21:30",
-          "day": 3
-        }
-      ],
-      "type": "restricted",
-      "category": "introduction",
-      "score": 2
-    },
-    {
-      "id": "ccs_1",
-      "name": "C语言程序设计",
-      "info": [
-        {
-          "teacher": "王五",
-          "week_start": 1,
-          "week_end": 10,
-          "classroom": "主123",
-          "time_start": "8:30",
-          "time_end": "12:15",
-          "day": 2
-        }
-      ],
-      "type": "must",
-      "category": "misc",
-      "score": 2
-    },
-    {
-      "id": "sxfx_1",
-      "name": "数学分析",
-      "info": [
-        {
-          "teacher": "赵六",
-          "week_start": 2,
-          "week_end": 14,
-          "classroom": "主M202",
-          "time_start": "9:50",
-          "time_end": "12:15",
-          "day": 1
-        }
-      ],
-      "type": "must",
-      "category": "misc",
-      "score": 6
-    },
-    {
-      "id": "xxds_1",
-      "name": "线性代数",
-      "info": [
-        {
-          "teacher": "刘二",
-          "week_start": 2,
-          "week_end": 14,
-          "classroom": "主323",
-          "time_start": "9:50",
-          "time_end": "12:15",
-          "day": 1
-        }
-      ],
-      "type": "must",
-      "category": "misc",
-      "score": 5
-    },
-    {
-      "id": "ggkfs_1",
-      "name": "改革开放史",
-      "info": [
-        {
-          "teacher": "钱七",
-          "week_start": 7,
-          "week_end": 14,
-          "classroom": "F101",
-          "time_start": "8:00",
-          "time_end": "11:25",
-          "day": 1
-        }
-      ],
-      "type": "restricted",
-      "category": "four",
-      "score": 1.5
-    },
-    {
-      "id": "dydsjtyy_1",
-      "name": "电影大师镜头语言",
-      "info": [
-        {
-          "teacher": "孙八",
-          "week_start": 2,
-          "week_end": 6,
-          "classroom": "主南306",
-          "time_start": "2:00",
-          "time_end": "3:30",
-          "day": 4
-        }
-      ],
-      "type": "restricted",
-      "category": "art",
-      "score": 2
-    },
-    {
-      "id": "javacxsj_1",
-      "name": "Java程序设计",
-      "info": [
-        {
-          "teacher": "李九",
-          "week_start": 2,
-          "week_end": 5,
-          "classroom": "A123",
-          "time_start": "19:00",
-          "time_end": "21:25",
-          "day": 3
-        },
-        {
-          "teacher": "李十",
-          "week_start": 6,
-          "week_end": 10,
-          "classroom": "A321",
-          "time_start": "19:00",
-          "time_end": "21:25",
-          "day": 3
-        },
-        {
-          "teacher": "李十一",
-          "week_start": 10,
-          "week_end": 14,
-          "classroom": "A222",
-          "time_start": "19:00",
-          "time_end": "21:25",
-          "day": 3
-        }
-      ],
-      "type": "free",
-      "category": "misc",
-      "score": 3
-    },
-    {
-      "id": "dzxxgcdl_1",
-      "name": "电子信息工程导论",
-      "info": [
-        {
-          "teacher": "周十",
-          "week_start": 3,
-          "week_end": 12,
-          "classroom": "主北102",
-          "time_start": "7:00",
-          "time_end": "8:30",
-          "day": 4
-        }
-      ],
-      "type": "restricted",
-      "category": "introduction",
-      "score": 1
-    }
-  ],
-  "course_plan": [
-    {
-      "mode": "course",
-      "id": "ccs",
-      "name": "C语言程序设计",
-      "type": "must",
-      "score": {
-        "mode": "e",
-        "value": 2
+  "plan": {
+    "2024": {
+      "11": {
+        "20": [
+          {
+            "task": "数分作业",
+            "emergency": 1
+          },
+          {
+            "task": "程设debug",
+            "emergency": 2
+          },
+          {
+            "task": "走软小组作业",
+            "emergency": 3
+          },
+          {
+            "task": "党课感想",
+            "emergency": 2
+          },
+          {
+            "task": "习概展示",
+            "emergency": 1
+          },
+          {
+            "task": "数分作业",
+            "emergency": 1
+          },
+          {
+            "task": "程设debug",
+            "emergency": 2
+          },
+          {
+            "task": "走软小组作业",
+            "emergency": 3
+          },
+          {
+            "task": "党课感想",
+            "emergency": 2
+          },
+          {
+            "task": "习概展示",
+            "emergency": 1
+          },
+          {
+            "task": "数分作业",
+            "emergency": 1
+          },
+          {
+            "task": "程设debug",
+            "emergency": 2
+          },
+          {
+            "task": "走软小组作业",
+            "emergency": 3
+          },
+          {
+            "task": "党课感想",
+            "emergency": 2
+          },
+          {
+            "task": "习概展示",
+            "emergency": 1
+          },
+          {
+            "task": "数分作业",
+            "emergency": 1
+          },
+          {
+            "task": "程设debug",
+            "emergency": 2
+          },
+          {
+            "task": "走软小组作业",
+            "emergency": 3
+          },
+          {
+            "task": "党课感想",
+            "emergency": 2
+          },
+          {
+            "task": "习概展示",
+            "emergency": 1
+          },
+          {
+            "task": "数分作业",
+            "emergency": 1
+          },
+          {
+            "task": "程设debug",
+            "emergency": 2
+          },
+          {
+            "task": "走软小组作业",
+            "emergency": 3
+          },
+          {
+            "task": "党课感想",
+            "emergency": 2
+          },
+          {
+            "task": "习概展示",
+            "emergency": 1
+          }
+        ],
+        "10": [
+          {
+            "task": "数分作业",
+            "emergency": 1
+          },
+          {
+            "task": "程设debug",
+            "emergency": 2
+          },
+          {
+            "task": "走软小组作业",
+            "emergency": 3
+          },
+          {
+            "task": "党课感想",
+            "emergency": 2
+          },
+          {
+            "task": "习概展示",
+            "emergency": 1
+          }
+        ],
+        "25": [
+          {
+            "task": "数分作业",
+            "emergency": 1
+          },
+          {
+            "task": "程设debug",
+            "emergency": 2
+          },
+          {
+            "task": "走软小组作业",
+            "emergency": 3
+          },
+          {
+            "task": "党课感想",
+            "emergency": 2
+          },
+          {
+            "task": "习概展示",
+            "emergency": 1
+          }
+        ]
+      },
+      "12": {
+        "20": [
+          {
+            "task": "数分作业",
+            "emergency": 1
+          },
+          {
+            "task": "程设debug",
+            "emergency": 2
+          },
+          {
+            "task": "走软小组作业",
+            "emergency": 3
+          },
+          {
+            "task": "党课感想",
+            "emergency": 2
+          },
+          {
+            "task": "习概展示",
+            "emergency": 1
+          }
+        ],
+        "10": [
+          {
+            "task": "数分作业",
+            "emergency": 1
+          },
+          {
+            "task": "程设debug",
+            "emergency": 2
+          },
+          {
+            "task": "走软小组作业",
+            "emergency": 3
+          },
+          {
+            "task": "党课感想",
+            "emergency": 2
+          },
+          {
+            "task": "习概展示",
+            "emergency": 1
+          }
+        ],
+        "25": [
+          {
+            "task": "数分作业",
+            "emergency": 1
+          },
+          {
+            "task": "程设debug",
+            "emergency": 2
+          },
+          {
+            "task": "走软小组作业",
+            "emergency": 3
+          },
+          {
+            "task": "党课感想",
+            "emergency": 2
+          },
+          {
+            "task": "习概展示",
+            "emergency": 1
+          }
+        ]
       }
-    },
-    {
-      "mode": "course",
-      "id": "sxfx",
-      "name": "数学分析",
-      "type": "must",
-      "score": {
-        "mode": "e",
-        "value": 6
+    }
+  },
+  "concentration": {
+    "2024": {
+      "11": {
+        "16": [
+          {
+            "mode": "cycle",
+            "todo": "线性代数2.4节1-7题",
+            "goal": {
+              "study": "1:00",
+              "break": "0:10",
+              "T": 2
+            },
+            "current": {
+              "study": "0:00",
+              "break": "0:00",
+              "T": 0
+            },
+            "state": "none"
+          },
+          {
+            "mode": "count",
+            "todo": "刷TD",
+            "goal": {
+              "count": 3
+            },
+            "current": {
+              "count": 0
+            },
+            "state": "none"
+          },
+          {
+            "mode": "timing",
+            "todo": "读《改革开放简史》",
+            "goal": {
+              "time": "3:00"
+            },
+            "current": {
+              "time": "0:00"
+            },
+            "state": "none"
+          }
+        ]
       }
-    },
-    {
-      "mode": "category",
-      "category": "introduction",
-      "score": {
-        "mode": "ge",
-        "value": 1
-      },
-      "id": "c2c7"
-    },
-    {
-      "mode": "category",
-      "category": "four",
-      "score": {
-        "mode": "ge",
-        "value": 1
-      },
-      "id": "3b56"
-    },
-    {
-      "mode": "category",
-      "category": "art",
-      "score": {
-        "mode": "ge",
-        "value": 1.5
-      },
-      "id": "1cb3"
     }
-  ],
-  "chosen_course": [
-    {
-      "id": "ccs_1",
-      "name": "C语言程序设计",
-      "info": [
-        {
-          "teacher": "王五",
-          "week_start": 1,
-          "week_end": 10,
-          "classroom": "主123",
-          "time_start": "8:30",
-          "time_end": "12:15",
-          "day": 2
-        }
-      ],
-      "type": "must",
-      "category": "misc",
-      "score": 2
-    },
-    {
-      "id": "zjrj_1",
-      "name": "走进软件",
-      "info": [
-        {
-          "teacher": "张三",
-          "week_start": 1,
-          "week_end": 5,
-          "classroom": "F101",
-          "time_start": "6:30",
-          "time_end": "8:30",
-          "day": 3
-        },
-        {
-          "teacher": "李四",
-          "week_start": 6,
-          "week_end": 10,
-          "classroom": "E222",
-          "time_start": "20:30",
-          "time_end": "21:30",
-          "day": 3
-        }
-      ],
-      "type": "restricted",
-      "category": "introduction",
-      "score": 2
-    }
-  ],
-  "boya_plan": [
-    {
-      "category": "art",
-      "count": 2,
-      "id": "a84e"
-    },
-    {
-      "category": "morality",
-      "count": 2,
-      "id": "0ce9"
-    },
-    {
-      "category": "labor",
-      "count": 2,
-      "id": "d4d9"
-    }
-  ],
-  "boya_finished": [],
-  "boya_list": [
-    {
-      "title": "身体素质综合提高",
-      "category": "labor",
-      "date": "2024.11.25",
-      "time_start": "19:00",
-      "time_end": "21:00",
-      "classroom": "学院路田径场跑廊入口",
-      "id": "1wl1"
-    },
-    {
-      "title": "皮影戏的面子和里子",
-      "category": "art",
-      "date": "2024.12.1",
-      "time_start": "14:00",
-      "time_end": "16:00",
-      "classroom": "学院路校区晨星音乐厅",
-      "id": "cxk2"
-    },
-    {
-      "title": "沙河校区厨艺课",
-      "category": "labor",
-      "date": "2024.11.20",
-      "time_start": "15:30",
-      "time_end": "17:00",
-      "classroom": "沙河西区食堂三层",
-      "id": "55lz"
-    },
-    {
-      "title": "身体素质综合提高",
-      "category": "morality",
-      "date": "2024.11.4",
-      "time_start": "14:00",
-      "time_end": "16:00",
-      "classroom": "F228",
-      "id": "09gg"
-    },
-    {
-      "title": "法学名家大讲坛——数字时代的法治与法学",
-      "category": "morality",
-      "date": "2024.11.23",
-      "time_start": "14:00",
-      "time_end": "16:00",
-      "classroom": "如心会议中心大报告厅",
-      "id": "ppo4"
-    },
-    {
-      "title": "传承与创新：数字时代的法律社会学",
-      "category": "morality",
-      "date": "2024.11.22",
-      "time_start": "14:00",
-      "time_end": "16:00",
-      "classroom": "如心会议中心大报告厅",
-      "id": "7uia"
-    },
-    {
-      "title": "关于汉字文化圈中日本的“国字·位相文字”",
-      "category": "art",
-      "date": "2024.10.30",
-      "time_start": "13:30",
-      "time_end": "15:00",
-      "classroom": "学院路校区如心楼806",
-      "id": "356f"
-    },
-    {
-      "title": "学林士谔法，悟爱国情怀",
-      "category": "morality",
-      "date": "2024.11.21",
-      "time_start": "14:00",
-      "time_end": "16:00",
-      "classroom": "主219",
-      "id": "bc4c"
-    },
-    {
-      "title": "团扇手工制作现场课",
-      "category": "labor",
-      "date": "2024.11.18",
-      "time_start": "14:30",
-      "time_end": "16:30",
-      "classroom": "学院路思源楼一层（思源厅）",
-      "id": "8ee9"
-    },
-    {
-      "title": "商业航天发展前沿与学业规划",
-      "category": "morality",
-      "date": "2024.11.29",
-      "time_start": "19:00",
-      "time_end": "21:00",
-      "classroom": "沙河校区教0-004",
-      "id": "1234"
-    },
-    {
-      "title": "“航梦马排”挑战赛",
-      "category": "labor",
-      "date": "2024.11.23",
-      "time_start": "10:00",
-      "time_end": "13:00",
-      "classroom": "学院路校区排球场",
-      "id": "5678"
-    },
-    {
-      "title": "学中共党史，促祖国统一",
-      "category": "morality",
-      "date": "2024.11.23",
-      "time_start": "14:00",
-      "time_end": "16:00",
-      "classroom": "沙河教区教5-101",
-      "id": "9101"
-    },
-    {
-      "title": "放飞梦想——北京邮电大学青春歌会",
-      "category": "art",
-      "date": "2024.11.18",
-      "time_start": "19:30",
-      "time_end": "21:20",
-      "classroom": "北京邮电大学沙河校区体育场",
-      "id": "1213"
-    },
-    {
-      "title": "红船星河宣讲团中国式现代化沙河专场",
-      "category": "morality",
-      "date": "2024.11.20",
-      "time_start": "15:00",
-      "time_end": "16:30",
-      "classroom": "沙河教0-001",
-      "id": "1415"
-    },
-    {
-      "title": "青春剧燃——《青春年代》话剧专场",
-      "category": "art",
-      "date": "2024.11.19",
-      "time_start": "19:00",
-      "time_end": "20:30",
-      "classroom": "学院路校区晨兴音乐厅",
-      "id": "1617"
-    }
-  ],
-  "chosen_boya": [
-    {
-      "id": "5678"
-    },
-    {
-      "id": "1234"
-    }
-  ]
+  }
 }

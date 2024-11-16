@@ -13,27 +13,31 @@ export default defineConfig({
 			},
 		},
 	},
-	server: {
-		proxy: {
-			"/api": {
-				//服务器请求域名
-				target: "http://localhost:3000",
-				changeOrigin: true,
-				rewrite: (path) => path.replace(/^\/api/, ""),
-			},
-		},
-	},
+	// server: {
+	// 	proxy: {
+	// 		"/api": {
+	// 			//服务器请求域名
+	// 			target: "http://localhost:3000",
+	// 			changeOrigin: true,
+	// 			rewrite: (path) => path.replace(/^\/api/, ""),
+	// 		},
+	// 	},
+	// },
 	resolve: {
-		alias: {
-			"@": resolve(__dirname, "./src"), //把 src 的别名设置为 @
-		},
+		alias: [
+			{
+				find: "@",
+				replacement: resolve(__dirname, "./src"), //把 src 的别名设置为 @
+			},
+		],
 	},
 	css: {
 		preprocessorOptions: {
-			less: {
-				javascriptEnabled: true,
-				additionalData: `@import "${resolve(__dirname, "src/less/style.less")}";`,
-			},
+			// less: {
+			// 	javascriptEnabled: true,
+			// 	additionalData: `@import "${resolve(__dirname, "src/less/style.less")}";`,
+      // },
+      scss: { api: 'modern-compiler' },
 		},
 	},
 });

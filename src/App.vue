@@ -1,70 +1,79 @@
 <script setup>
-import { onBeforeMount } from "vue";
-import Head from "./components/Head.vue";
-import URL from "./data/api";
-import { get } from "./util/axios";
-import {
-	courseListStore,
-	coursePlanStore,
-	chosenCourseStore,
-	boyaPlanStore,
-	boyaFinishedStore,
-	boyaListStore,
-	chosenBoyaStore,
-} from "./data/store";
-import EndLine from "./components/EndLine.vue";
+import NavBar from "@/components/NavBar.vue";
+import { onMounted, watch, ref, computed } from "vue";
+import { planStore, concentrationStore, studyStore } from "@/data/store";
+import jsonDatabase from "../db/db.json" with { type: "json" };
+import bg from "./assets/bg.webp"
+import { useRouter, useRoute } from 'vue-router'
 
-onBeforeMount(() => {
-  get(URL.courseList).then((res) => {
-		courseListStore.courseList.push(...res.data);
-	});
-	get(URL.coursePlan).then((res) => {
-		coursePlanStore.coursePlan.push(...res.data);
-	});
-	get(URL.chosenCourse).then((res) => {
-		chosenCourseStore.chosenCourse.push(...res.data);
-	});
-	get(URL.boyaPlan).then((res) => {
-		boyaPlanStore.boyaPlan.push(...res.data);
-	});
-	get(URL.boyaFinished).then((res) => {
-		boyaFinishedStore.boyaFinished.push(...res.data);
-	});
-	get(URL.boyaList).then((res) => {
-		boyaListStore.boyaList.push(...res.data);
-	});
-	get(URL.chosenBoya).then((res) => {
-		chosenBoyaStore.chosenBoya.push(...res.data);
-	});
+onMounted(() => {
+  if (!localStorage.initialized) {
+    // 将plan和concentration初始化为db.json中的默认数据，并标记初始化已完成
+    planStore.plan = jsonDatabase.plan;
+    concentrationStore.concentration = jsonDatabase.concentration;
+    localStorage.initialized = true;
+  } else {
+    // 在已初始化的情况下，不应从db.json加载数据，而是从localStorage加载用户修改后的数据
+    planStore.plan = JSON.parse(localStorage.plan);
+    concentrationStore.concentration = JSON.parse(localStorage.concentration);
+    studyStore.study = JSON.parse(localStorage.study ?? "{}");
+  }
+})
+// 当store变更，保存用户修改后的数据
+watch(planStore, (newValue, oldValue) => {
+  localStorage.plan = JSON.stringify(newValue.plan);
+})
+watch(concentrationStore, (newValue, oldValue) => {
+  localStorage.concentration = JSON.stringify(newValue.concentration);
+})
+watch(studyStore, (newValue, oldValue) => {
+  localStorage.study = JSON.stringify(newValue.study);
+})
+const router = useRouter(), route = useRoute();
+const showNavBar = computed(() => {
+  return "/study/concentrate" !== route.path;
 });
+const background = computed(() => {
+  return { img: !showNavBar.value ? `url(${bg})` : "none" };
+});
+function handleConcentrate() {
+
+}
 </script>
-
 <template>
-	<Head></Head>
-	<RouterView></RouterView>
-  <EndLine></EndLine>
+  <el-container>
+    <el-aside v-if="showNavBar">
+      <NavBar></NavBar>
+    </el-aside>
+    <el-main>
+      <Transition name="el-fade-in-linear">
+        <RouterView @concentrate="handleConcentrate"></RouterView>
+      </Transition>
+    </el-main>
+  </el-container>
 </template>
+<style lang="scss" scoped>
+.bg {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-<style lang="less">
-:root {
-  --buaa-dark-blue: #092a5f;
-  --buaa-mild-blue: #005bac;
-  --buaa-light-blue: #5a93e9;
-  --buaa-lighter-blue: #91beed;
-  --dark-red: rgb(159, 5, 5);
-  --darker-red: rgb(110, 1, 1);
-  --grey:grey;
-  --dark-grey: rgb(51, 51, 51);
-  --greyish-blue: rgb(5, 70, 111);
+.el-container {
+  margin: 0;
+  height: 100%;
+  background-image: v-bind("background.img");
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
 }
-#app {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+
+:global(body) {
+  margin: 0;
 }
-html {
-  font-size: 16px;
+
+:global(*) {
+  scrollbar-width: none;
 }
 </style>
